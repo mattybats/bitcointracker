@@ -1,0 +1,23 @@
+PODS:
+  - Alamofire (4.5.1)
+  - coinbase-official (3.3.0):
+    - coinbase-official/client (= 3.3.0)
+    - coinbase-official/core (= 3.3.0)
+    - coinbase-official/OAuth (= 3.3.0)
+  - coinbase-official/client (3.3.0):
+    - coinbase-official/core
+  - coinbase-official/core (3.3.0)
+  - coinbase-official/OAuth (3.3.0):
+    - coinbase-official/core
+
+DEPENDENCIES:
+  - Alamofire (~> 4.5)
+  - coinbase-official
+
+SPEC CHECKSUMS:
+  Alamofire: 2d95912bf4c34f164fdfc335872e8c312acaea4a
+  coinbase-official: 57de4952bdb85e16a8f99930c57e16505ff571ed
+
+PODFILE CHECKSUM: 85d6cb43445112e149d63183a5e0ba730d46b1ca
+
+COCOAPODS: 1.1.1

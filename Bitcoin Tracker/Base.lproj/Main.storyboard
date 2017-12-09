@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="AvenirNext.ttc">
+            <string>AvenirNext-Bold</string>
+            <string>AvenirNext-Regular</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Bitcoin_Tracker" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bitcoin Price:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zgf-nF-CcC">
+                                <rect key="frame" x="16" y="20" width="343" height="70"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="70" id="smy-OM-xqH"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="34"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$0.00USD" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IRb-vj-DmM">
+                                <rect key="frame" x="16" y="111" width="343" height="58"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="58" id="igg-hk-tqO"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="25"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Powered by" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e4u-BY-W93">
+                                <rect key="frame" x="23" y="623" width="92" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="34" id="lq5-mw-6Rz"/>
+                                    <constraint firstAttribute="width" constant="92" id="lwe-1c-Gzu"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pcz-ln-ILu">
+                                <rect key="frame" x="24" y="605" width="109" height="0.0"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="109" id="HJa-4q-Ed4"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="CoinDesk" translatesAutoresizingMaskIntoConstraints="NO" id="O2N-oD-1MQ">
+                                <rect key="frame" x="120" y="623" width="122" height="34"/>
+                            </imageView>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dNR-6K-6Tk">
+                                <rect key="frame" x="0.0" y="232" width="375" height="216"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="Wkd-T7-s4y"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="GZE-eq-biF"/>
+                                </connections>
+                            </pickerView>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="FSs-5n-X7S">
+                                <rect key="frame" x="112" y="186" width="150" height="29"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="28" id="SiB-lI-byk"/>
+                                </constraints>
+                                <segments>
+                                    <segment title="Buy"/>
+                                    <segment title="Sell"/>
+                                </segments>
+                            </segmentedControl>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gO1-Nu-aCP">
+                                <rect key="frame" x="133" y="465" width="109" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="WbS-gh-qBR"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="28"/>
+                                <state key="normal" title="Execute">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="btnExecuteClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="j8W-25-aU7"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.0" green="1" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="FSs-5n-X7S" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="112" id="0De-iu-10x"/>
+                            <constraint firstItem="dNR-6K-6Tk" firstAttribute="centerX" secondItem="gO1-Nu-aCP" secondAttribute="centerX" id="1gL-rL-Cwd"/>
+                            <constraint firstItem="FSs-5n-X7S" firstAttribute="centerX" secondItem="IRb-vj-DmM" secondAttribute="centerX" id="3xa-UM-rxO"/>
+                            <constraint firstItem="dNR-6K-6Tk" firstAttribute="top" secondItem="FSs-5n-X7S" secondAttribute="bottom" constant="18" id="4gq-eD-ubf"/>
+                            <constraint firstItem="IRb-vj-DmM" firstAttribute="top" secondItem="zgf-nF-CcC" secondAttribute="bottom" constant="21" id="7qt-08-Wvb"/>
+                            <constraint firstItem="e4u-BY-W93" firstAttribute="top" secondItem="pcz-ln-ILu" secondAttribute="bottom" constant="18" id="7wb-CL-iag"/>
+                            <constraint firstItem="O2N-oD-1MQ" firstAttribute="leading" secondItem="e4u-BY-W93" secondAttribute="trailing" constant="5" id="CYZ-TR-97h"/>
+                            <constraint firstItem="FSs-5n-X7S" firstAttribute="top" secondItem="IRb-vj-DmM" secondAttribute="bottom" constant="17" id="D6Y-po-Zq8"/>
+                            <constraint firstItem="FSs-5n-X7S" firstAttribute="centerX" secondItem="dNR-6K-6Tk" secondAttribute="centerX" id="E97-8S-Qn0"/>
+                            <constraint firstItem="e4u-BY-W93" firstAttribute="bottom" secondItem="O2N-oD-1MQ" secondAttribute="bottom" id="EXg-j3-Ydk"/>
+                            <constraint firstItem="zgf-nF-CcC" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="GFT-Gp-yFh"/>
+                            <constraint firstItem="e4u-BY-W93" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="23" id="OTd-eK-vrj"/>
+                            <constraint firstItem="dNR-6K-6Tk" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="V2u-pc-iTu"/>
+                            <constraint firstItem="gO1-Nu-aCP" firstAttribute="top" secondItem="dNR-6K-6Tk" secondAttribute="bottom" constant="17" id="XIZ-K3-d2H"/>
+                            <constraint firstItem="zgf-nF-CcC" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="a7S-c1-D3v"/>
+                            <constraint firstItem="pcz-ln-ILu" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="8" id="acC-2x-xY6"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="e4u-BY-W93" secondAttribute="bottom" constant="10" id="eJW-4T-TGw"/>
+                            <constraint firstItem="zgf-nF-CcC" firstAttribute="trailing" secondItem="IRb-vj-DmM" secondAttribute="trailing" id="g7N-Vb-UpR"/>
+                            <constraint firstItem="zgf-nF-CcC" firstAttribute="leading" secondItem="IRb-vj-DmM" secondAttribute="leading" id="j3K-I6-MUq"/>
+                            <constraint firstItem="e4u-BY-W93" firstAttribute="top" secondItem="O2N-oD-1MQ" secondAttribute="top" id="sdF-hw-qFf"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="O2N-oD-1MQ" secondAttribute="trailing" constant="147" id="svN-oX-gmZ"/>
+                            <constraint firstItem="zgf-nF-CcC" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="whr-GQ-g29"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="btnExecute" destination="gO1-Nu-aCP" id="jgq-oT-nbU"/>
+                        <outlet property="lblTitle" destination="IRb-vj-DmM" id="hJx-To-XQW"/>
+                        <outlet property="pickerView" destination="dNR-6K-6Tk" id="Mk1-5z-mCL"/>
+                        <outlet property="segment" destination="FSs-5n-X7S" id="lrB-UN-vy3"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="252" y="126.38680659670166"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="CoinDesk" width="511" height="98"/>
+    </resources>
+</document>
